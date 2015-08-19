@@ -41,8 +41,7 @@ public class LoginActivity extends BaseActivity{
 
     @TAInject
     private TASyncHttpClient syncHttpClient;
-    @TAInject
-    private AsyncHttpClient asyncHttpClient;
+
 
     private String userName, password;
 
@@ -63,12 +62,9 @@ public class LoginActivity extends BaseActivity{
     }
 
     @Override
-    protected void onAfterSetContentView() {
-        super.onAfterSetContentView();
-
+    protected void onAfterOnCreate(Bundle savedInstanceState) {
+        super.onAfterOnCreate(savedInstanceState);
         initLoginInfo();
-
-
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -122,9 +118,9 @@ public class LoginActivity extends BaseActivity{
             Bundle data = new Bundle();
             if(!TAStringUtils.isBlank(userEntity.getRealName())){
                 data.putBoolean("isLogin", true);
-
                 userInfo.edit().putString(Constants.PARAM_LOGIN_PASSWORD, password).commit();
                 userInfo.edit().putString(Constants.PARAM_LOGIN_LOGIN_NAME, userName).commit();
+                userInfo.edit().putString(Constants.PARAM_USER_ID, userEntity.getUserId()).commit();
             }else{
                 data.putBoolean("isLogin", false);
             }

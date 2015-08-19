@@ -88,8 +88,8 @@
     <orderEntry type="library" exported="" name="support-v4-21.0.2" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-21.0.2" level="project" />
     <orderEntry type="library" exported="" name="picasso-2.5.0" level="project" />
+    <orderEntry type="library" exported="" name="fastjson-1.1.43.android" level="project" />
     <orderEntry type="library" exported="" name="cardview-v7-21.0.2" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-21.0.2" level="project" />
-    <orderEntry type="library" name="fastjson-1.1.43.android (2)" level="project" />
   </component>
 </module>
