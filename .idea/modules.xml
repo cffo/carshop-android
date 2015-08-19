@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Carshop.iml" filepath="$PROJECT_DIR$/Carshop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/carshop-android.iml" filepath="$PROJECT_DIR$/carshop-android.iml" />
       <module fileurl="file://$PROJECT_DIR$/main/main.iml" filepath="$PROJECT_DIR$/main/main.iml" />
     </modules>
   </component>

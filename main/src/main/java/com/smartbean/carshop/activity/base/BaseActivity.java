@@ -1,6 +1,9 @@
-package com.smartbean.carshop.activity;
+package com.smartbean.carshop.activity.base;
 
+import android.app.ActivityManager;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.widget.Toast;
 import com.ta.TAActivity;
 import com.ta.util.netstate.TANetWorkUtil;
@@ -8,8 +11,8 @@ import com.ta.util.netstate.TANetWorkUtil;
 /**
  * Created by Administrator on 2015/6/15.
  */
-public class BaseActivity extends TAActivity
-{
+public class BaseActivity extends TAActivity {
+    private long firstTime = 0;
     @Override
     protected void onPreOnCreate(Bundle savedInstanceState)
     {
@@ -32,5 +35,4 @@ public class BaseActivity extends TAActivity
         super.onDisConnect();
         Toast.makeText(this, "网络连接关闭", Toast.LENGTH_LONG).show();
     }
-
 }

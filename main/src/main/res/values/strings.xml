@@ -1,6 +1,10 @@
 <resources>
 
     <string name="app_name">车时商</string>
+    <string name="order">客户预约记录</string>
+    <string name="customer">我的客户</string>
+    <string name="ask">最近客户咨询</string>
+    <string name="qrcode">我的二维码</string>
 
     <string name="rd_repeat">Repeat</string>
     <string name="rd_daily">Daily</string>
