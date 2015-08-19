@@ -42,6 +42,8 @@ public class LoginActivity extends BaseActivity{
     @TAInject
     private AsyncHttpClient asyncHttpClient;
 
+    private String userName, password;
+
     @Override
     protected void onPreOnCreate(Bundle savedInstanceState) {
         super.onPreOnCreate(savedInstanceState);
@@ -55,9 +57,6 @@ public class LoginActivity extends BaseActivity{
         getTAApplication().registerActivity(R.string.asksActivity, AskActivity.class);
         getTAApplication().registerActivity(R.string.mainActivity, MainActivity.class);
         getTAApplication().registerActivity(R.string.loginActivity, LoginActivity.class);
-
-
-
     }
 
     @Override
@@ -68,9 +67,8 @@ public class LoginActivity extends BaseActivity{
             public void onClick(View v) {
                 switch (v.getId()) {
                     case R.id.login_button:
-                        userService = new UserService(syncHttpClient);
-                        String userName = loginNameText.getText().toString().trim();
-                        String password = passwordText.getText().toString().trim();
+                        userName = loginNameText.getText().toString().trim();
+                        password = passwordText.getText().toString().trim();
 
                         if(TAStringUtils.isBlank(userName)){
                             mSnackBar.applyStyle(R.style.SnackBarMultiLine)
@@ -83,23 +81,22 @@ public class LoginActivity extends BaseActivity{
                                     .duration(Constants.DISPLAY_TIME)
                                     .show();
                         }else{
+                            userService = new UserService(syncHttpClient);
                             new Thread(loginThread).start();
                         }
-
-                        break;
                 }
             }
         };
         loginButton.setOnClickListener(onClickListener);
     }
 
-    Runnable loginThread =  new Runnable(){
+    Handler handler = new Handler(){
         @Override
-        public void run() {
-            String userName = loginNameText.getText().toString().trim();
-            String password = passwordText.getText().toString().trim();
-            boolean isSuccess = userService.login(userName, password);
-            if(isSuccess){
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            Bundle data = msg.getData();
+            boolean isLogin = data.getBoolean("isLogin");
+            if(isLogin){
                 doActivity(R.string.mainActivity);
             }else{
                 mSnackBar.applyStyle(R.style.SnackBarMultiLine)
@@ -107,6 +104,18 @@ public class LoginActivity extends BaseActivity{
                         .duration(Constants.DISPLAY_TIME)
                         .show();
             }
+        }
+    };
+
+    Runnable loginThread =  new Runnable(){
+        @Override
+        public void run() {
+            boolean flag = userService.login(userName, password);
+            Message msg = new Message();
+            Bundle data = new Bundle();
+            data.putBoolean("isLogin", flag);
+            msg.setData(data);
+            handler.sendMessage(msg);
         }
     };
 }
