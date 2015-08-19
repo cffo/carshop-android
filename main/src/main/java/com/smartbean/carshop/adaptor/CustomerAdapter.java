@@ -34,7 +34,7 @@ public class CustomerAdapter extends CommonAdapter {
 	@Override
 	public View view(int position, View convertView, ViewGroup parent) {
 		convertView = inflater.inflate(R.layout.item_customers, null);
-		TextView titleTextView = (TextView)convertView.findViewById(R.id.title);
+		TextView nameTextView = (TextView)convertView.findViewById(R.id.name);
 		ImageView headImageView = (ImageView)convertView.findViewById(R.id.head);
 		TextView mobilePhoneTextView = (TextView)convertView.findViewById(R.id.mobile_phone);
 		String name = (String)data.get(position).get("name");
@@ -42,7 +42,7 @@ public class CustomerAdapter extends CommonAdapter {
 		Bitmap avatarBitmap = (Bitmap)data.get(position).get("avatarBitmap");
 
 		mobilePhoneTextView.setText("电话："+mobilePhone);
-		titleTextView.setText("姓名："+name);
+		nameTextView.setText("姓名："+name);
 		headImageView.setImageBitmap(avatarBitmap);
 		return convertView;
 	}

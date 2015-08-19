@@ -1,3 +1,4 @@
+<!--
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
@@ -28,23 +29,72 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"/>
 
-            <!--<TextView-->
-                    <!--android:layout_width="fill_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:text="天幕小甜点"-->
-                    <!--android:layout_centerVertical="true"-->
-                    <!--android:gravity="center_vertical"-->
-                    <!--android:textSize="12sp" />-->
+            &lt;!&ndash;<TextView&ndash;&gt;
+                    &lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;
+                    &lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;
+                    &lt;!&ndash;android:text="天幕小甜点"&ndash;&gt;
+                    &lt;!&ndash;android:layout_centerVertical="true"&ndash;&gt;
+                    &lt;!&ndash;android:gravity="center_vertical"&ndash;&gt;
+                    &lt;!&ndash;android:textSize="12sp" />&ndash;&gt;
 
-            <!--<TextView-->
-                    <!--android:layout_width="fill_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:text="你好欢迎咨询，你好欢迎咨询，你好欢迎咨询，你好欢迎咨询，你好欢迎咨询，你好欢迎咨询，你好欢迎咨询！"-->
-                    <!--android:layout_centerVertical="true"-->
-                    <!--android:layout_marginBottom="5dp"-->
-                    <!--android:layout_marginTop="5dp"-->
-                    <!--android:gravity="center_vertical"-->
-                    <!--android:textSize="14sp"/>-->
+            &lt;!&ndash;<TextView&ndash;&gt;
+                    &lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;
+                    &lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;
+                    &lt;!&ndash;android:text="你好欢迎咨询，你好欢迎咨询，你好欢迎咨询，你好欢迎咨询，你好欢迎咨询，你好欢迎咨询，你好欢迎咨询！"&ndash;&gt;
+                    &lt;!&ndash;android:layout_centerVertical="true"&ndash;&gt;
+                    &lt;!&ndash;android:layout_marginBottom="5dp"&ndash;&gt;
+                    &lt;!&ndash;android:layout_marginTop="5dp"&ndash;&gt;
+                    &lt;!&ndash;android:gravity="center_vertical"&ndash;&gt;
+                    &lt;!&ndash;android:textSize="14sp"/>&ndash;&gt;
+
+            <TextView
+                    android:id="@+id/mobile_phone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:textSize="12sp"/>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp">
+
+        <ImageView
+                android:id="@+id/head"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo" />
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/head"
+                android:layout_marginLeft="5dp"
+                android:paddingBottom="5dp"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark" />
+
 
             <TextView
                     android:id="@+id/mobile_phone"
