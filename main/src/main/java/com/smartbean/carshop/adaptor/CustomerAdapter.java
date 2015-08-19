@@ -1,9 +1,12 @@
 package com.smartbean.carshop.adaptor;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 import com.smartbean.carshop.activity.R;
 
 import java.util.ArrayList;
@@ -23,7 +26,7 @@ public class CustomerAdapter extends CommonAdapter {
 
 	public CustomerAdapter(Activity context, ArrayList<HashMap<String, Object>> data) {
 		inflater = LayoutInflater.from(context);
-		this.setCount(10);
+		this.setCount(data.size());
 		this.activity = context;
 		this.data = data;
 	}
@@ -31,6 +34,16 @@ public class CustomerAdapter extends CommonAdapter {
 	@Override
 	public View view(int position, View convertView, ViewGroup parent) {
 		convertView = inflater.inflate(R.layout.item_customers, null);
+		TextView titleTextView = (TextView)convertView.findViewById(R.id.title);
+		ImageView headImageView = (ImageView)convertView.findViewById(R.id.head);
+		TextView mobilePhoneTextView = (TextView)convertView.findViewById(R.id.mobile_phone);
+		String name = (String)data.get(position).get("name");
+		String mobilePhone = (String)data.get(position).get("mobile");
+		Bitmap avatarBitmap = (Bitmap)data.get(position).get("avatarBitmap");
+
+		mobilePhoneTextView.setText("电话："+mobilePhone);
+		titleTextView.setText("姓名："+name);
+		headImageView.setImageBitmap(avatarBitmap);
 		return convertView;
 	}
 

@@ -9,6 +9,7 @@
     <file url="file://$PROJECT_DIR$/main/src/main/java/com/smartbean/carshop/activity/MainActivity.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/main/src/main/java/com/smartbean/carshop/activity/OrderActivity.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/main/src/main/java/com/smartbean/carshop/activity/QrcodeActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/main/src/main/java/com/smartbean/carshop/service/CustomersService.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/main/src/main/java/com/smartbean/carshop/service/UserService.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/main/src/main/java/com/smartbean/carshop/utils/ImageUtils.java" charset="UTF-8" />
   </component>

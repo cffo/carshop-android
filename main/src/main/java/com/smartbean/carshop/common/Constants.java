@@ -10,6 +10,8 @@ public class Constants {
     static String INTERFACE_URL = "http://auto.honsintech.com/manage/remote/";
     public static String INTERFACE_USER_LOGIN = INTERFACE_URL + "login";
     public static String INTERFACE_USER_QRCODE = INTERFACE_URL + "qrCode";
+    public static String INTERFACE_CUSTOMER_CUSTOMERS = INTERFACE_URL + "customers";
+
 
 
     public static String PARAM_LOGIN_LOGIN_NAME = "username";
