@@ -1,10 +1,9 @@
 package com.smartbean.carshop.service;
 
-import android.util.Log;
+import com.alibaba.fastjson.JSONObject;
 import com.smartbean.carshop.common.Constants;
+import com.smartbean.carshop.entity.UserEntity;
 import com.ta.TASyncHttpClient;
-import com.ta.annotation.TAInject;
-import com.ta.util.http.AsyncHttpResponseHandler;
 import com.ta.util.http.RequestParams;
 
 /**
@@ -18,18 +17,21 @@ public class UserService {
     }
 
 
-    public boolean login(String userName, String password){
+    public UserEntity login(String userName, String password){
         RequestParams params = new RequestParams();
-        params.put(Constants.PARAM_LOGIN_USER_NAME, userName);
+        params.put(Constants.PARAM_LOGIN_LOGIN_NAME, userName);
         params.put(Constants.PARAM_LOGIN_PASSWORD, password);
-        String url = "http://auto.honsintech.com/manage/remote/login?username=cheshishang&password=111111";
-        this.syncHttpClient.get(url, new AsyncHttpResponseHandler() {
-            @Override
-            public void onSuccess(String content) {
-                // TODO Auto-generated method stub
-                super.onSuccess(content);
-            }
-        });
-        return true;
+        String result = this.syncHttpClient.get(Constants.INTERFACE_USER_LOGIN, params);
+        JSONObject jsonObject = JSONObject.parseObject(result);
+        boolean success = jsonObject.getBoolean("success");
+        UserEntity userEntity = new UserEntity();
+        if(success){
+            JSONObject resObj = jsonObject.getJSONObject("obj");
+            userEntity.setRealName(resObj.getString("realName"));
+            userEntity.setUserId(resObj.getString("id"));
+            userEntity.setShopId(resObj.getString("shopId"));
+            userEntity.setLoginId(resObj.getString("loginId"));
+        }
+        return userEntity;
     }
 }

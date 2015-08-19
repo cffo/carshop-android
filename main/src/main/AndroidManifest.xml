@@ -9,8 +9,6 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
-    <uses-sdk android:minSdkVersion="3"
-              android:targetSdkVersion="8" />
     <application
         android:name="com.ta.TAApplication"
         android:allowBackup="true"

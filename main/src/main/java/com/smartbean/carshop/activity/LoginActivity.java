@@ -1,4 +1,5 @@
 package com.smartbean.carshop.activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -9,6 +10,7 @@ import com.rey.material.widget.Button;
 import com.rey.material.widget.SnackBar;
 import com.smartbean.carshop.activity.base.BaseActivity;
 import com.smartbean.carshop.common.Constants;
+import com.smartbean.carshop.entity.UserEntity;
 import com.smartbean.carshop.service.UserService;
 import com.ta.TASyncHttpClient;
 import com.ta.annotation.TAInject;
@@ -44,12 +46,13 @@ public class LoginActivity extends BaseActivity{
 
     private String userName, password;
 
+    SharedPreferences userInfo;
+
     @Override
     protected void onPreOnCreate(Bundle savedInstanceState) {
         super.onPreOnCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         toolbar.setTitle(R.string.app_name);
-
 
         getTAApplication().registerActivity(R.string.orderActivity, OrderActivity.class);
         getTAApplication().registerActivity(R.string.customerActivity, CustomerActivity.class);
@@ -62,6 +65,10 @@ public class LoginActivity extends BaseActivity{
     @Override
     protected void onAfterSetContentView() {
         super.onAfterSetContentView();
+
+        initLoginInfo();
+
+
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -110,12 +117,25 @@ public class LoginActivity extends BaseActivity{
     Runnable loginThread =  new Runnable(){
         @Override
         public void run() {
-            boolean flag = userService.login(userName, password);
+            UserEntity userEntity = userService.login(userName, password);
             Message msg = new Message();
             Bundle data = new Bundle();
-            data.putBoolean("isLogin", flag);
+            if(!TAStringUtils.isBlank(userEntity.getRealName())){
+                data.putBoolean("isLogin", true);
+
+                userInfo.edit().putString(Constants.PARAM_LOGIN_PASSWORD, password).commit();
+                userInfo.edit().putString(Constants.PARAM_LOGIN_LOGIN_NAME, userName).commit();
+            }else{
+                data.putBoolean("isLogin", false);
+            }
             msg.setData(data);
             handler.sendMessage(msg);
         }
     };
+
+    public void initLoginInfo(){
+        userInfo = getSharedPreferences(Constants.ENTITY_USER_INFO, 0);
+        loginNameText.setText(userInfo.getString(Constants.PARAM_LOGIN_LOGIN_NAME,""));
+        passwordText.setText(userInfo.getString(Constants.PARAM_LOGIN_PASSWORD,""));
+    }
 }
