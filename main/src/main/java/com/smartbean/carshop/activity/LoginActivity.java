@@ -6,7 +6,7 @@ import android.os.Message;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
-//import cn.jpush.android.api.JPushInterface;
+import cn.jpush.android.api.JPushInterface;
 import com.rey.material.widget.Button;
 import com.rey.material.widget.SnackBar;
 import com.smartbean.carshop.R;

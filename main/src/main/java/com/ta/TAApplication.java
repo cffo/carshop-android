@@ -18,6 +18,8 @@ package com.ta;
 import java.lang.Thread.UncaughtExceptionHandler;
 import java.util.HashMap;
 import java.util.Stack;
+
+import cn.jpush.android.api.JPushInterface;
 import com.ta.exception.TAAppException;
 import com.ta.exception.TANoSuchCommandException;
 import com.ta.mvc.command.TACommandExecutor;
@@ -88,6 +90,9 @@ public class TAApplication extends Application implements TAIResponseListener
 		doOncreate();
 		onAfterCreateApplication();
 		getAppManager();
+
+		JPushInterface.setDebugMode(true);
+		JPushInterface.init(this);
 	}
 
 	private void doOncreate()
