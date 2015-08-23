@@ -9,7 +9,7 @@ import android.support.annotation.NonNull;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.smartbean.carshop.activity.R;
+import com.smartbean.carshop.R;
 import com.rey.material.drawable.CircularProgressDrawable;
 import com.rey.material.drawable.LinearProgressDrawable;
 

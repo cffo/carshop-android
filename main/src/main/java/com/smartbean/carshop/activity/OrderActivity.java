@@ -1,6 +1,8 @@
 package com.smartbean.carshop.activity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+//import cn.jpush.android.api.JPushInterface;
+import com.smartbean.carshop.R;
 import com.smartbean.carshop.activity.base.BaseActivity;
 import com.smartbean.carshop.adaptor.OrderAdapter;
 import com.smartbean.carshop.view.MyListView;
@@ -28,4 +30,13 @@ public class OrderActivity extends BaseActivity {
         orderListView.setAdapter(new OrderAdapter(this, null));
     }
 
+//    @Override
+//    public void onResume(){
+//        JPushInterface.onResume(this);
+//    }
+//
+//    @Override
+//    public void onPause(){
+//        JPushInterface.onPause(this);
+//    }
 }

@@ -7,7 +7,7 @@ import android.os.Build;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.smartbean.carshop.activity.R;
+import com.smartbean.carshop.R;
 
 public class PopupWindow extends android.widget.PopupWindow {
 

@@ -8,7 +8,7 @@ import android.os.Build;
 import android.support.v7.internal.widget.TintTypedArray;
 import android.util.TypedValue;
 
-import com.smartbean.carshop.activity.R;
+import com.smartbean.carshop.R;
 
 public class ThemeUtil {
 		

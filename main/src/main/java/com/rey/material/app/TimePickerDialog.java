@@ -17,7 +17,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.smartbean.carshop.activity.R;
+import com.smartbean.carshop.R;
 import com.rey.material.util.ThemeUtil;
 import com.rey.material.widget.CircleCheckedTextView;
 import com.rey.material.widget.TimePicker;

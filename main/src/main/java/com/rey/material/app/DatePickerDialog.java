@@ -21,7 +21,7 @@ import android.widget.FrameLayout;
 import com.rey.material.util.ThemeUtil;
 import com.rey.material.widget.DatePicker;
 import com.rey.material.widget.YearPicker;
-import com.smartbean.carshop.activity.R;
+import com.smartbean.carshop.R;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

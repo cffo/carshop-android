@@ -15,7 +15,7 @@ import android.graphics.drawable.Drawable;
 import android.os.SystemClock;
 import android.util.AttributeSet;
 
-import com.smartbean.carshop.activity.R;
+import com.smartbean.carshop.R;
 import com.rey.material.util.ColorUtil;
 import com.rey.material.util.ThemeUtil;
 import com.rey.material.util.ViewUtil;

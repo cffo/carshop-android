@@ -3,7 +3,7 @@ package com.rey.material.drawable;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.smartbean.carshop.activity.R;
+import com.smartbean.carshop.R;
 import org.xmlpull.v1.XmlPullParser;
 
 import android.content.Context;

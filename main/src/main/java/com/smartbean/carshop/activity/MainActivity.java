@@ -3,6 +3,8 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
+//import cn.jpush.android.api.JPushInterface;
+import com.smartbean.carshop.R;
 import com.smartbean.carshop.activity.base.BaseActivity;
 import com.ta.annotation.TAInjectView;
 
@@ -58,5 +60,15 @@ public class MainActivity extends BaseActivity{
         mainCustomerViews.setOnClickListener(onClickListener);
         mainQrcodeViews.setOnClickListener(onClickListener);
     }
+
+//    @Override
+//    public void onResume(){
+//        JPushInterface.onResume(this);
+//    }
+//
+//    @Override
+//    public void onPause(){
+//        JPushInterface.onPause(this);
+//    }
 
 }

@@ -6,8 +6,10 @@ import android.os.Message;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
+//import cn.jpush.android.api.JPushInterface;
 import com.rey.material.widget.Button;
 import com.rey.material.widget.SnackBar;
+import com.smartbean.carshop.R;
 import com.smartbean.carshop.activity.base.BaseActivity;
 import com.smartbean.carshop.common.Constants;
 import com.smartbean.carshop.entity.UserEntity;
@@ -36,7 +38,7 @@ public class LoginActivity extends BaseActivity{
 
     UserService userService;
 
-    @TAInjectView(id = R.id.main_sn)
+    @TAInjectView(id = R.id.login_sn)
     SnackBar mSnackBar;
 
     @TAInject
@@ -59,6 +61,7 @@ public class LoginActivity extends BaseActivity{
         getTAApplication().registerActivity(R.string.asksActivity, AskActivity.class);
         getTAApplication().registerActivity(R.string.mainActivity, MainActivity.class);
         getTAApplication().registerActivity(R.string.loginActivity, LoginActivity.class);
+        getTAApplication().registerActivity(R.string.sendMsgActivity, SendMsgActivity.class);
     }
 
     @Override
@@ -134,4 +137,14 @@ public class LoginActivity extends BaseActivity{
         loginNameText.setText(userInfo.getString(Constants.PARAM_LOGIN_LOGIN_NAME,""));
         passwordText.setText(userInfo.getString(Constants.PARAM_LOGIN_PASSWORD,""));
     }
+
+//    @Override
+//    public void onResume(){
+//        JPushInterface.onResume(this);
+//    }
+//
+//    @Override
+//    public void onPause(){
+//        JPushInterface.onPause(this);
+//    }
 }

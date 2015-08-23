@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+    <RelativeLayout
+            android:id="@+id/user_msg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/border_top">
+        <TextView
+                android:id="@+id/user_content"
+                android:paddingRight="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="顾问消息"/>
+        <ImageView
+                android:id="@+id/user_head"
+                android:layout_alignParentRight="true"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/logo"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/customer_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/border_top">
+
+        <ImageView
+                android:id="@+id/customer_head"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/logo"/>
+
+        <TextView
+                android:id="@+id/customer_content"
+                android:paddingLeft="5dp"
+                android:layout_toRightOf="@id/customer_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="顾客消息"/>
+
+    </RelativeLayout>
+</LinearLayout>

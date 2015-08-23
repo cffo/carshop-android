@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.smartbean.carshop.activity.R;
+import com.smartbean.carshop.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;

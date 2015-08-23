@@ -40,7 +40,7 @@ import com.rey.material.drawable.ArrowDrawable;
 import com.rey.material.drawable.DividerDrawable;
 import com.rey.material.drawable.RippleDrawable;
 import com.rey.material.util.ThemeUtil;
-import com.smartbean.carshop.activity.R;
+import com.smartbean.carshop.R;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;

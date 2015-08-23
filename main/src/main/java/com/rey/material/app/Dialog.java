@@ -26,7 +26,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 
-import com.smartbean.carshop.activity.R;
+import com.smartbean.carshop.R;
 import com.rey.material.drawable.BlankDrawable;
 import com.rey.material.drawable.RippleDrawable;
 import com.rey.material.util.ThemeUtil;

@@ -7,7 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.smartbean.carshop.activity.R;
+import com.smartbean.carshop.R;
+import com.ta.common.TAStringUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -41,6 +42,9 @@ public class CustomerAdapter extends CommonAdapter {
 		String mobilePhone = (String)data.get(position).get("mobile");
 		Bitmap avatarBitmap = (Bitmap)data.get(position).get("avatarBitmap");
 
+		if(TAStringUtils.isBlank(mobilePhone)){
+			mobilePhone = "暂无电话";
+		}
 		mobilePhoneTextView.setText("电话："+mobilePhone);
 		nameTextView.setText("姓名："+name);
 		headImageView.setImageBitmap(avatarBitmap);

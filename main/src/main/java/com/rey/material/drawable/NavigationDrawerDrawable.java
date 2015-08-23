@@ -8,7 +8,7 @@ import android.graphics.ColorFilter;
 import android.graphics.PixelFormat;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
-import com.smartbean.carshop.activity.R;
+import com.smartbean.carshop.R;
 
 public class NavigationDrawerDrawable extends Drawable implements Drawable.Callback{
 

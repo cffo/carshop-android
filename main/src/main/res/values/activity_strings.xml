@@ -7,6 +7,5 @@
     <string name="qrcodeActivity">QrcodeActivity</string>
     <string name="loginActivity">LoginActivity</string>
     <string name="mainActivity">MainActivity</string>
-
-
+    <string name="sendMsgActivity">SendMsgActivity</string>
 </resources>

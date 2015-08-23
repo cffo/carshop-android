@@ -15,7 +15,9 @@ public class ImageUtils {
         URL myFileURL;
         Bitmap bitmap=null;
         try{
+            url = url.replaceAll("\\\\", "/");
             myFileURL = new URL(url);
+
             HttpURLConnection conn=(HttpURLConnection)myFileURL.openConnection();
             InputStream is = conn.getInputStream();
             bitmap = BitmapFactory.decodeStream(is);

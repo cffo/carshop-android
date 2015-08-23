@@ -51,7 +51,7 @@ import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 
-import com.smartbean.carshop.activity.R;
+import com.smartbean.carshop.R;
 
 /**
  * Static library support version of the framework's {@link android.widget.ListPopupWindow}.

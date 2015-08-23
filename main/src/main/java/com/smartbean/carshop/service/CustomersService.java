@@ -9,6 +9,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.smartbean.carshop.common.Constants;
 import com.smartbean.carshop.entity.CustomerEntity;
 import com.smartbean.carshop.entity.CustomerEntityList;
+import com.smartbean.carshop.entity.MessageEntity;
 import com.smartbean.carshop.entity.UserEntity;
 import com.smartbean.carshop.utils.ImageUtils;
 import com.ta.TASyncHttpClient;
@@ -71,6 +72,7 @@ public class CustomersService {
                 } else {
                     data.putString("list", null);
                 }
+
 
                 msg.setData(data);
                 handler.sendMessage(msg);

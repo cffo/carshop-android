@@ -6,6 +6,8 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
+//import cn.jpush.android.api.JPushInterface;
+import com.smartbean.carshop.R;
 import com.smartbean.carshop.activity.base.BaseActivity;
 import com.smartbean.carshop.common.Constants;
 import com.smartbean.carshop.service.UserService;
@@ -66,5 +68,15 @@ public class QrcodeActivity extends BaseActivity {
             userService.getQrCode(userInfo.getString(Constants.PARAM_USER_ID,""), handler);
         }
     };
+
+//    @Override
+//    public void onResume(){
+//        JPushInterface.onResume(this);
+//    }
+//
+//    @Override
+//    public void onPause(){
+//        JPushInterface.onPause(this);
+//    }
 
 }

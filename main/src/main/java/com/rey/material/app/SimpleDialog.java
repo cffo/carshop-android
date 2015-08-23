@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ScrollView;
 
-import com.smartbean.carshop.activity.R;
+import com.smartbean.carshop.R;
 import com.rey.material.drawable.BlankDrawable;
 import com.rey.material.util.ThemeUtil;
 import com.rey.material.widget.CheckBox;
