@@ -49,4 +49,17 @@
     <string name="logining">程序在后台执行, 请查看日志！</string>
     <string name="setting_su">设置成功</string>
 
+    <string name="SERVER_URL">http://auto.honsintech.com/manage</string>
+
+    <string name="ENTITY_USER_INFO">userInfo</string>
+
+    <string name="PARAM_LOGIN_LOGIN_NAME">username</string>
+    <string name="PARAM_LOGIN_PASSWORD">password</string>
+    <string name="PARAM_LOGIN_USERID">userId</string>
+
+
+    <string name="INTERFACE_USER_ORDERS">/remote/orders</string>
+    <string name="INTERFACE_ASKS">/remote/asks</string>
+    <string name="AFTERSALESCONSULTANTID">afterSalesConsultantId</string>
+
 </resources>

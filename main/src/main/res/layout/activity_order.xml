@@ -19,5 +19,11 @@
             android:gravity="center"
             android:scrollbars="vertical"
             >
+
     </com.smartbean.carshop.view.MyListView>
+    <!--<ViewStub
+            android:id ="@+id/empty_view"
+            android:layout_width ="fill_parent"
+            android:layout_height ="wrap_content"
+            android:layout ="@layout/item_empty" />-->
 </RelativeLayout>

@@ -31,4 +31,8 @@ public class Constants {
 
     public static String ENTITY_USER_INFO = "userInfo";
 
+    public static final String AGREE = "AGREE";//已处理
+    public static final String FINISH = "FINISH";//完成
+    public static final String PREHANDLE = "PREHANDLE";//待处理
+
 }

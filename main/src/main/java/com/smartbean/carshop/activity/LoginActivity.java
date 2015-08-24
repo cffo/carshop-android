@@ -1,4 +1,5 @@
 package com.smartbean.carshop.activity;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
@@ -49,9 +50,12 @@ public class LoginActivity extends BaseActivity{
 
     SharedPreferences userInfo;
 
+    Context context;
+
     @Override
     protected void onPreOnCreate(Bundle savedInstanceState) {
         super.onPreOnCreate(savedInstanceState);
+        this.context = this;
         setContentView(R.layout.activity_login);
         toolbar.setTitle(R.string.app_name);
 
@@ -121,6 +125,7 @@ public class LoginActivity extends BaseActivity{
             Bundle data = new Bundle();
             if(!TAStringUtils.isBlank(userEntity.getRealName())){
                 data.putBoolean("isLogin", true);
+                JPushInterface.setAlias(context, userName, null);
                 userInfo.edit().putString(Constants.PARAM_LOGIN_PASSWORD, password).commit();
                 userInfo.edit().putString(Constants.PARAM_LOGIN_LOGIN_NAME, userName).commit();
                 userInfo.edit().putString(Constants.PARAM_USER_ID, userEntity.getUserId()).commit();
